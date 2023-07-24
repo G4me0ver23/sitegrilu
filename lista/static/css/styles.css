@@ -1,0 +1,81 @@
+/* Pagina das palavras */
+.index-page {
+    display: flex;
+    padding: 20px;
+    background-image: linear-gradient(to left,#F9D85B, #F2E3B3);
+    min-height: 100vh;
+}
+
+.words-container{
+    margin-left: 30px;
+}
+
+.words-container a{
+    color: #001f80;
+}
+
+
+
+/* Pagina das informações */
+.infos-page {
+    display: flex;
+    flex-direction: column;
+    max-width: 1465px;
+    padding: 5px;
+    background-color: #F9D85B;
+    min-height: 100vh;
+    align-items: left;
+}
+
+.infos-page a{
+    margin-top: 3px;
+    width:fit-content;
+    border:1px solid #001f80;
+    background-color: #001f80;
+    border-radius: 7px;
+    color:white;
+}
+
+.cabecalho{
+    display: flex;
+    padding-left: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.cabecalho h1{
+    padding-left: 35px;
+    color: #001f80;
+}
+
+.infos {
+    background-color:#F9E8A1;
+    border: 1px solid #F7D68F;
+    padding: 10px;
+}
+
+.infos:hover{
+    background-color: #F2E3B3;
+    scale: 1.007;
+    
+}
+
+.title{
+    color:darkblue;
+    align-self: center;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    font-family:'Times New Roman', Times, serif;
+    font-size:xx-large;
+}
+
+.texto{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+}
+
+
+/* Geral */
+a{
+    text-decoration: none!important;
+}

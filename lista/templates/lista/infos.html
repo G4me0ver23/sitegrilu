@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Palavra {{palvra.palavra}}
+        </title>
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    </head>
+    <body>
+        <div class="infos-page">
+            <div class="cabecalho">
+                <img src="{%static 'images/'%}{{palavra.image}}" width="120px"/>
+                <h1>{{palavra.palavra}}</h1>
+            </div>
+            {% for informacao in palavra.informacao_set.all %}
+                <div class="infos">
+                    <p class="title">{{informacao.titulo}}</p> 
+                    <p class="texto">{{informacao.texto}}</p>
+                </div>
+            {% endfor %}
+            <a href="{% url 'lista:index' %}">Voltar aos cursos</a>
+        </div>
+    </body>
+</html>

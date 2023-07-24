@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Lista de Palavras
+        </title>
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    </head>
+    <body>
+        {% if palavras %}
+            <div class="index-page">
+                <img src="{% static 'images/ufal.jpeg' %}" width="50%" height="50%"/>
+                <div class="words-container">
+                    <h1 class="title">Cursos da UFAL:</h1>
+                {% for palavra in palavras %}
+                    <a href="{% url 'lista:infos' palavra.id %}">{{ palavra.palavra }}</a><br/>
+                {% endfor %}
+                </div>
+            </div>
+        {% else %}
+            <p>Esta palavra não existe</p>
+        {% endif %}
+    </body>
+</html>
